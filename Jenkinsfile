@@ -1,12 +1,13 @@
 #!/usr/bin/env groovy
 properties([
     [$class: 'GithubProjectProperty',
-    displayName: '',
+    displayName: 'Teja',
     projectUrlStr: 'https://github.com/Demo-Teja/Miami.git'],
     pipelineTriggers([
         upstream(
      threshold: 'SUCCESS',
-     upstreamProjects:'https://github.com/Demo-Teja/Atlanta.git')
+     upstreamProjects:'https://github.com/Demo-Teja/omaha.git'
+        )
             ])
          ])
 
