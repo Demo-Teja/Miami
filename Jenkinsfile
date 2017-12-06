@@ -3,13 +3,8 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: 'Teja',
     projectUrlStr: 'https://github.com/Demo-Teja/Miami.git'],
-    pipelineTriggers([
-        upstream(
-     threshold: 'SUCCESS',
-     upstreamProjects:'https://github.com/Demo-Teja/omaha.git'
-        )
-            ])
-         ])
+    pipelineTriggers([upstream('Demo-Teja'),
+githubPush()])])
 
 pipeline {
     agent any 
