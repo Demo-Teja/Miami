@@ -3,7 +3,7 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: 'Teja',
     projectUrlStr: 'https://github.com/Demo-Teja/Miami.git'],
-    pipelineTriggers([upstream('Demo-Teja'),
+    pipelineTriggers([upstream('Demo-Teja/omaha.git'),
 githubPush()])])
 
 pipeline {
